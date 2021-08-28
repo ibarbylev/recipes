@@ -17,9 +17,9 @@
                         {{ recipe.description }}
                     </div>
                     <div class="buttons-container">
-                        <a class="button detail" href="./details.html">Details</a>
+                        <a class="button detail" href="{% url "recipe_detail" recipe.pk %}">Details</a>
                         <a class="button edit" href="{% url "recipe_update" recipe.pk %}">Edit</a>
-                        <a class="button delete" href="./delete.html">Delete</a>
+                        <a class="button delete" href="{% url "recipe_delete" recipe.pk %}">Delete</a>
                     </div>
                 </div>
             </div>
