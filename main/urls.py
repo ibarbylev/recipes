@@ -7,10 +7,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home_page, name='index'),
     path('create/', views.RecipeCreateView.as_view(), name='recipe_create'),
+    path('edit/<int:pk>/', views.RecipeUpdateView.as_view(), name='recipe_update'),
 ]
 
 
-# • '/create' - create recipe page
-# • '/edit/:id' - edit recipe page
 # • '/delete/:id' - delete recipe page
 # • '/details/:id' - recipe details page
